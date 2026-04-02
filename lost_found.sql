@@ -128,7 +128,7 @@ CREATE TABLE `users` (
   `role` enum('user','admin') DEFAULT 'user',
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -137,7 +137,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Aarav Sharma','aarav1@gmail.com','pass301','user'),(2,'Diya Patel','diya1@gmail.com','pass302','user'),(3,'Rohan Verma','rohan1@gmail.com','pass303','user'),(4,'Sneha Iyer','sneha1@gmail.com','pass304','user'),(5,'Karan Mehta','karan1@gmail.com','pass305','user'),(6,'Ananya Reddy','ananya1@gmail.com','pass306','user'),(7,'Vikram Singh','vikram1@gmail.com','pass307','user'),(8,'Pooja Nair','pooja1@gmail.com','pass308','user'),(9,'Aditya Gupta','aditya1@gmail.com','pass309','user'),(10,'Meera Joshi','meera1@gmail.com','pass310','user'),(11,'Rahul Das','rahul1@gmail.com','pass311','user'),(12,'Neha Kapoor','neha1@gmail.com','pass312','user'),(13,'Arjun Pillai','arjun1@gmail.com','pass313','user'),(14,'Kavya Menon','kavya1@gmail.com','pass314','user'),(15,'Siddharth Jain','sid1@gmail.com','pass315','user'),(16,'Ishita Bose','ishita1@gmail.com','pass316','user'),(17,'Manish Yadav','manish1@gmail.com','pass317','user'),(18,'Ritika Sharma','ritika1@gmail.com','pass318','user'),(19,'Deepak Kumar','deepak1@gmail.com','pass319','user'),(20,'Shreya Banerjee','shreya1@gmail.com','pass320','user'),(21,'Nikhil Rao','nikhil1@gmail.com','pass321','user'),(22,'Tanvi Kulkarni','tanvi1@gmail.com','pass322','user'),(23,'Harsh Agarwal','harsh1@gmail.com','pass323','user'),(24,'Priya Choudhary','priya1@gmail.com','pass324','user'),(25,'Varun Malhotra','varun1@gmail.com','pass325','user'),(26,'Aditi Mishra','aditi1@gmail.com','pass326','user'),(27,'Yash Thakur','yash1@gmail.com','pass327','user'),(28,'Simran Kaur','simran1@gmail.com','pass328','user'),(29,'Ravi Teja','ravi1@gmail.com','pass329','user'),(30,'Divya Shetty','divya1@gmail.com','pass330','admin');
+INSERT INTO `users` VALUES (1,'Aarav Sharma','aarav1@gmail.com','pass301','user'),(2,'Diya Patel','diya1@gmail.com','pass302','user'),(3,'Rohan Verma','rohan1@gmail.com','pass303','user'),(4,'Sneha Iyer','sneha1@gmail.com','pass304','user'),(5,'Karan Mehta','karan1@gmail.com','pass305','user'),(6,'Ananya Reddy','ananya1@gmail.com','pass306','user'),(7,'Vikram Singh','vikram1@gmail.com','pass307','user'),(8,'Pooja Nair','pooja1@gmail.com','pass308','user'),(9,'Aditya Gupta','aditya1@gmail.com','pass309','user'),(10,'Meera Joshi','meera1@gmail.com','pass310','user'),(11,'Rahul Das','rahul1@gmail.com','pass311','user'),(12,'Neha Kapoor','neha1@gmail.com','pass312','user'),(13,'Arjun Pillai','arjun1@gmail.com','pass313','user'),(14,'Kavya Menon','kavya1@gmail.com','pass314','user'),(15,'Siddharth Jain','sid1@gmail.com','pass315','user'),(16,'Ishita Bose','ishita1@gmail.com','pass316','user'),(17,'Manish Yadav','manish1@gmail.com','pass317','user'),(18,'Ritika Sharma','ritika1@gmail.com','pass318','user'),(19,'Deepak Kumar','deepak1@gmail.com','pass319','user'),(20,'Shreya Banerjee','shreya1@gmail.com','pass320','user'),(21,'Nikhil Rao','nikhil1@gmail.com','pass321','user'),(22,'Tanvi Kulkarni','tanvi1@gmail.com','pass322','user'),(23,'Harsh Agarwal','harsh1@gmail.com','pass323','user'),(24,'Priya Choudhary','priya1@gmail.com','pass324','user'),(25,'Varun Malhotra','varun1@gmail.com','pass325','user'),(26,'Aditi Mishra','aditi1@gmail.com','pass326','user'),(27,'Yash Thakur','yash1@gmail.com','pass327','user'),(28,'Simran Kaur','simran1@gmail.com','pass328','user'),(29,'Ravi Teja','ravi1@gmail.com','pass329','user'),(30,'Divya Shetty','divya1@gmail.com','pass330','admin'),(31,'Harini','harini1@gmail.com','haha11','user');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -150,4 +150,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-04-02 13:35:28
+-- Dump completed on 2026-04-02 13:40:53

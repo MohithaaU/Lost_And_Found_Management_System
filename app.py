@@ -59,7 +59,7 @@ def signup():
             INSERT INTO Users(name, email, password, role)
             VALUES (%s, %s, %s, %s)
             """,
-            (name, email, password, "student")
+            (name, email, password, "user")
         )
         connection.commit()
 
