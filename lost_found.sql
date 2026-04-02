@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.37, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
--- Host: localhost    Database: Lost_And_Found_Management_System
+-- Host: localhost    Database: lost_found_db
 -- ------------------------------------------------------
--- Server version	8.0.37
+-- Server version	8.0.31
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -68,7 +68,7 @@ CREATE TABLE `found_items` (
   PRIMARY KEY (`found_id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `found_items_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -77,7 +77,7 @@ CREATE TABLE `found_items` (
 
 LOCK TABLES `found_items` WRITE;
 /*!40000 ALTER TABLE `found_items` DISABLE KEYS */;
-INSERT INTO `found_items` VALUES (1,16,'Wallet','Accessories','Black leather wallet','Library','2026-03-11','found'),(2,17,'Phone','Electronics','Samsung phone with cracked screen','Cafeteria','2026-03-12','found'),(3,18,'ID Card','Documents','College ID card','Auditorium','2026-03-13','found'),(4,19,'Backpack','Bags','Blue Nike backpack','Bus Stop','2026-03-14','found'),(5,20,'Keys','Accessories','Keys with red keychain','Parking Lot','2026-03-15','found'),(6,21,'Watch','Accessories','Silver wrist watch','Gym','2026-03-16','found'),(7,22,'Laptop','Electronics','HP laptop in sleeve','Library','2026-03-17','found'),(8,23,'Water Bottle','Personal','Steel bottle','Classroom','2026-03-18','found'),(9,24,'Notebook','Stationery','Math notebook','Lab','2026-03-19','found'),(10,25,'Earphones','Electronics','White earphones','Cafeteria','2026-03-20','found'),(11,26,'Glasses','Accessories','Black frame specs','Library','2026-03-21','found'),(12,27,'Umbrella','Personal','Black umbrella','Entrance Gate','2026-03-22','found'),(13,28,'Calculator','Electronics','Casio calculator','Classroom','2026-03-23','found'),(14,29,'Pen Drive','Electronics','16GB USB','Lab','2026-03-24','found'),(15,30,'Jacket','Clothing','Grey hoodie','Playground','2026-03-25','found');
+INSERT INTO `found_items` VALUES (1,16,'Wallet','Accessories','Black leather wallet','Library','2026-03-11','found'),(2,17,'Phone','Electronics','Samsung phone with cracked screen','Cafeteria','2026-03-12','found'),(3,18,'ID Card','Documents','College ID card','Auditorium','2026-03-13','found'),(4,19,'Backpack','Bags','Blue Nike backpack','Bus Stop','2026-03-14','found'),(5,20,'Keys','Accessories','Keys with red keychain','Parking Lot','2026-03-15','found'),(6,21,'Watch','Accessories','Silver wrist watch','Gym','2026-03-16','found'),(7,22,'Laptop','Electronics','HP laptop in sleeve','Library','2026-03-17','found'),(8,23,'Water Bottle','Personal','Steel bottle','Classroom','2026-03-18','found'),(9,24,'Notebook','Stationery','Math notebook','Lab','2026-03-19','found'),(10,25,'Earphones','Electronics','White earphones','Cafeteria','2026-03-20','found'),(11,26,'Glasses','Accessories','Black frame specs','Library','2026-03-21','found'),(12,27,'Umbrella','Personal','Black umbrella','Entrance Gate','2026-03-22','found'),(13,28,'Calculator','Electronics','Casio calculator','Classroom','2026-03-23','found'),(14,29,'Pen Drive','Electronics','16GB USB','Lab','2026-03-24','found'),(15,30,'Jacket','Clothing','Grey hoodie','Playground','2026-03-25','found'),(16,17,'cap','Accessories','blue,adidas ','library','2026-03-04','claimed'),(17,17,'pouch','Accessories','red,blue stripes','library','2026-04-05','claimed'),(18,17,'cap','Accessories','red','library','2026-04-04','claimed'),(19,17,'scale','Accessories','metal','rooms','2026-04-03','claimed');
 /*!40000 ALTER TABLE `found_items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -100,7 +100,7 @@ CREATE TABLE `lost_items` (
   PRIMARY KEY (`lost_id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `lost_items_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -109,7 +109,7 @@ CREATE TABLE `lost_items` (
 
 LOCK TABLES `lost_items` WRITE;
 /*!40000 ALTER TABLE `lost_items` DISABLE KEYS */;
-INSERT INTO `lost_items` VALUES (1,1,'Wallet','Accessories','Black leather wallet','Library','2026-03-10','lost'),(2,2,'Phone','Electronics','Samsung phone with cracked screen','Cafeteria','2026-03-11','lost'),(3,3,'ID Card','Documents','College ID card','Auditorium','2026-03-12','lost'),(4,4,'Backpack','Bags','Blue Nike backpack','Bus Stop','2026-03-13','lost'),(5,5,'Keys','Accessories','Set of house keys with red keychain','Parking Lot','2026-03-14','lost'),(6,6,'Watch','Accessories','Silver wrist watch','Gym','2026-03-15','lost'),(7,7,'Laptop','Electronics','HP laptop in black sleeve','Library','2026-03-16','lost'),(8,8,'Water Bottle','Personal','Steel bottle with stickers','Classroom','2026-03-17','lost'),(9,9,'Notebook','Stationery','Math notes notebook','Lab','2026-03-18','lost'),(10,10,'Earphones','Electronics','White wired earphones','Cafeteria','2026-03-19','lost'),(11,11,'Glasses','Accessories','Black frame specs','Library','2026-03-20','lost'),(12,12,'Umbrella','Personal','Foldable black umbrella','Entrance Gate','2026-03-21','lost'),(13,13,'Calculator','Electronics','Casio scientific calculator','Classroom','2026-03-22','lost'),(14,14,'Pen Drive','Electronics','16GB USB drive','Lab','2026-03-23','lost'),(15,15,'Jacket','Clothing','Grey hoodie','Playground','2026-03-24','lost');
+INSERT INTO `lost_items` VALUES (1,1,'Wallet','Accessories','Black leather wallet','Library','2026-03-10','lost'),(2,2,'Phone','Electronics','Samsung phone with cracked screen','Cafeteria','2026-03-11','lost'),(3,3,'ID Card','Documents','College ID card','Auditorium','2026-03-12','lost'),(4,4,'Backpack','Bags','Blue Nike backpack','Bus Stop','2026-03-13','lost'),(5,5,'Keys','Accessories','Set of house keys with red keychain','Parking Lot','2026-03-14','lost'),(6,6,'Watch','Accessories','Silver wrist watch','Gym','2026-03-15','lost'),(7,7,'Laptop','Electronics','HP laptop in black sleeve','Library','2026-03-16','lost'),(8,8,'Water Bottle','Personal','Steel bottle with stickers','Classroom','2026-03-17','lost'),(9,9,'Notebook','Stationery','Math notes notebook','Lab','2026-03-18','lost'),(10,10,'Earphones','Electronics','White wired earphones','Cafeteria','2026-03-19','lost'),(11,11,'Glasses','Accessories','Black frame specs','Library','2026-03-20','lost'),(12,12,'Umbrella','Personal','Foldable black umbrella','Entrance Gate','2026-03-21','lost'),(13,13,'Calculator','Electronics','Casio scientific calculator','Classroom','2026-03-22','lost'),(14,14,'Pen Drive','Electronics','16GB USB drive','Lab','2026-03-23','lost'),(15,15,'Jacket','Clothing','Grey hoodie','Playground','2026-03-24','lost'),(16,17,'gel pen','Accessories','blue color,red striped','stairs','2026-03-03','lost'),(17,17,'pouch','Accessories','blue,red striped','library','2026-04-04','lost'),(18,17,'cap','Accessories','red','stairs','2026-04-10','lost'),(19,17,'calculator','Accessories','casio ','canteen','2026-04-02','lost'),(20,17,'pencil','Accessories','camlin,red.yellow stripes','library','2026-04-02','lost'),(21,17,'ring','Accessories','diamond','canteen','2026-03-31','lost'),(22,17,'cap','Accessories','white','stairs','2026-04-02','lost'),(23,17,'eraser','Accessories','apsara','room','2026-04-03','lost'),(24,17,'scale','Accessories','metal','room','2026-03-31','lost'),(25,17,'Laptop','Accessories','Dell,black,i3','library','2026-04-02','lost'),(26,17,'Laptop','Accessories','Dell,black,i3','room A','2026-04-02','lost');
 /*!40000 ALTER TABLE `lost_items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -150,4 +150,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-03-31 15:53:55
+-- Dump completed on 2026-04-02 13:35:28

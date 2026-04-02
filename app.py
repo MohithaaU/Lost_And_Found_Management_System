@@ -19,7 +19,7 @@ def home():
 @app.route('/sync_db')
 def sync_db():
     try:
-        with open("latest_backup.sql", "w") as backup_file:
+        with open("lost_found.sql", "w") as backup_file:
             subprocess.run(
                 [
                     "mysqldump",
