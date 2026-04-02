@@ -1,11 +1,10 @@
 from flask import Flask, render_template, request, redirect, session,url_for
 from db import connection
 from flask import redirect, url_for, flash
+import subprocess
 
 app = Flask(__name__)
 app.secret_key = "lostfoundsecret"
-
-import os
 
 @app.route('/backup_db')
 def backup_db():
@@ -17,8 +16,36 @@ def backup_db():
 def home():
     return redirect("/login")
 
+@app.route('/sync_db')
+def sync_db():
+    try:
+        with open("latest_backup.sql", "w") as backup_file:
+            subprocess.run(
+                [
+                    "mysqldump",
+                    "-u", "root",
+                    "-pWoMoXi22@#**",
+                    "lost_found_db"
+                ],
+                stdout=backup_file,
+                check=True
+            )
 
-@app.route("/signup", methods=["GET", "POST"])
+        subprocess.run(["git", "add", "."], check=True)
+        subprocess.run(
+            ["git", "commit", "-m", "Auto DB backup sync"],
+            check=False
+        )
+        subprocess.run(["git", "push"], check=True)
+
+        flash("Backup + GitHub sync successful!")
+
+    except subprocess.CalledProcessError as e:
+        flash(f"Sync failed: {e}")
+
+    return redirect(url_for("dashboard"))
+
+
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
@@ -67,7 +94,7 @@ def dashboard():
               <a href="/report-lost">Report Lost Item</a><br><br>
               <a href="/report-found">Report Found Item</a><br><br>
               <a href="/logout">Logout</a>
-              <a href="/backup_db"><button>Backup Database</button></a>
+              <a href="/sync_db"><button>Backup & Sync to GitHub</button></a>
               '''
 
 @app.route("/report-lost", methods=["GET", "POST"])
